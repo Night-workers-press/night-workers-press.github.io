@@ -1,0 +1,55 @@
+/* ============================================================
+   NIGHT WORKERS — book pages
+   ============================================================ */
+.bhead{padding:9rem 0 3rem;border-bottom:1px solid var(--rule);position:relative;overflow:hidden}
+.bhead::before{content:'';position:absolute;top:-220px;right:-120px;width:680px;height:680px;background:radial-gradient(ellipse,var(--amber-g) 0%,transparent 70%);pointer-events:none}
+.bgrid{display:grid;grid-template-columns:186px 1fr;gap:2.6rem;align-items:start;position:relative}
+.bgrid .cov{box-shadow:inset 5px 0 9px -5px rgba(0,0,0,.9),0 26px 44px -18px rgba(0,0,0,.85)}
+.bser{font-family:var(--fu);font-size:.62rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);margin-bottom:.8rem}
+.bser a{text-decoration:none}
+.bser a:hover{color:var(--amber-l)}
+.btitle{font-family:var(--fd);font-size:clamp(1.9rem,4.6vw,3rem);font-weight:400;line-height:1.12;letter-spacing:.02em}
+.bfr{font-family:var(--fd);font-style:italic;font-size:1.25rem;color:var(--t2);margin-top:.45rem}
+.bsub{font-family:var(--fu);font-size:.86rem;color:var(--t2);margin-top:1rem;line-height:1.65;max-width:560px}
+.bby{font-family:var(--fd);font-size:1.02rem;color:var(--t2);margin-top:1.3rem;line-height:1.7}
+.bby b{color:var(--t1);font-weight:600}
+.bby a{color:var(--amber);text-decoration:none}
+.bby a:hover{color:var(--amber-l)}
+.bbuy{display:flex;gap:.6rem;margin-top:1.6rem;flex-wrap:wrap;align-items:center}
+.soon{font-family:var(--fu);font-size:.62rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--moon-d);border:1px dashed rgba(185,199,224,.35);border-radius:3px;padding:.5rem .9rem}
+.balt{font-family:var(--fu);font-size:.72rem;color:var(--t3);margin-top:.9rem;line-height:1.7}
+.balt a{color:var(--amber-l);text-decoration:underline;text-decoration-color:rgba(211,163,74,.35);text-underline-offset:3px}
+
+/* excerpt */
+.exwrap{position:relative}
+.exlab{font-family:var(--fu);font-size:.6rem;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--amber);margin-bottom:1rem}
+.excerpt{max-width:720px;font-size:1.12rem;line-height:1.85;color:var(--t1)}
+.excerpt p{margin-bottom:1.1rem;text-align:justify;hyphens:auto}
+.excerpt p:first-of-type::first-letter{font-family:var(--fd);float:left;font-size:3.6rem;line-height:.86;padding:.16em .12em 0 0;color:var(--amber)}
+.exh{font-family:var(--fu);font-size:.66rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--t3);margin:2.6rem 0 1.2rem;padding-top:1.4rem;border-top:1px solid var(--rule)}
+.excerpt .exh:first-child{margin-top:0;padding-top:0;border-top:0}
+.exfade{position:relative;margin-top:-6rem;height:6rem;background:linear-gradient(to bottom,transparent,var(--bg));pointer-events:none}
+.excta{text-align:center;padding:1rem 0 0}
+.excta p{font-family:var(--fu);font-size:.82rem;color:var(--t3);margin-bottom:1.1rem}
+
+/* series strip */
+.sernav{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:2rem;padding-top:1.6rem;border-top:1px solid var(--rule)}
+.sernav a{font-family:var(--fu);font-size:.72rem;color:var(--t2);text-decoration:none;max-width:46%;line-height:1.5}
+.sernav a:hover{color:var(--amber-l)}
+.sernav span{display:block;font-size:.58rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--t3);margin-bottom:.25rem}
+.sernav .nx{text-align:right}
+
+/* meta table */
+.bmeta{list-style:none;margin-top:1.6rem;border-top:1px solid var(--rule)}
+.bmeta li{display:flex;gap:1rem;padding:.6rem 0;border-bottom:1px solid var(--rule);font-family:var(--fu);font-size:.78rem}
+.bmeta b{flex:0 0 130px;color:var(--t3);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.6rem;padding-top:.15rem}
+.bmeta span{color:var(--t2)}
+.bmeta a{color:var(--amber-l);text-decoration:none}
+
+@media(max-width:760px){
+  .bhead{padding:7.5rem 0 2.4rem}
+  .bgrid{grid-template-columns:120px 1fr;gap:1.4rem}
+  .excerpt{font-size:1.05rem}
+  .excerpt p{text-align:left}
+  .sernav a{max-width:100%}
+}
