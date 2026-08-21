@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://night-workers-press.github.io/sitemap.xml
