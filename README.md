@@ -7,14 +7,14 @@ Aucune dépendance, aucun build : il suffit d'ouvrir `index.html`.
 
 | Fichier | Contenu |
 |---|---|
-| `index.html` | Manifeste, l'équipe des trois, les 8 programmes, le livre fondateur |
+| `index.html` | Manifeste, l'équipe des trois, les 10 programmes, le livre fondateur |
 | `team.html` | L'équipe en détail — un territoire par traducteur |
-| `programmes.html` | Les 8 programmes éditoriaux, avec les rayons de couvertures |
+| `programmes.html` | Les 10 programmes éditoriaux, avec les rayons de couvertures |
 | `catalogue.html` | Catalogue complet, filtrable et triable |
 | `edgard-bronce-ceray.html` · `sofia-hamett.html` · `charles-hidetamabiveti.html` | Profils + bibliographies |
 | `about.html` | Origine du nom, la règle en trois mots, droits et contact |
 | `acknowledgements.html` | **Nos dettes** — Sue Lloyd & The Genge Press, Black Coat Press, les archives |
-| `book/*.html` | **100 pages livre** — synopsis, métadonnées, extrait de ~1 200 mots, contexte, navigation dans la série |
+| `book/*.html` | **130 pages livre** — synopsis, métadonnées, extrait de ~1 200 mots, contexte, navigation dans la série |
 
 ## Le seul fichier à modifier : `assets/catalogue.js`
 
@@ -43,7 +43,7 @@ Ajouter un livre = ajouter une ligne.
 | `sub` / `fr` | ligne de description, version EN et version FR |
 | `au` | auteur original — sert au filtre « Auteur » |
 | `tr` | traducteur — sert au filtre « Traducteur » et aux compteurs d'équipe |
-| `prog` | `zevaco` · `rocambole` · `lostfrench` · `lupin` · `gaboriau` · `rostand` · `updated` · `bakumatsu` · `origins` |
+| `prog` | `zevaco` · `rocambole` · `lostfrench` · `lupin` · `gaboriau` · `rostand` · `rostanden` · `updated` · `bakumatsu` · `classics` · `origins` |
 | `ser` | série, pour les rayons (`Les Pardaillan`, `Le Capitan`, `Novels & Diptychs`…) |
 | `pos` | numéro dans la série |
 | `k` / `p` / `h` | ASIN Kindle / broché / relié — les boutons se créent tout seuls |
@@ -96,10 +96,10 @@ autre page, il suffit d'ajouter des `<span data-l="ja">` et le bouton correspond
 
 ## Pages livre et SEO
 
-Les 100 pages sous `book/` sont l'essentiel du référencement : chacune porte un
+Les 130 pages sous `book/` sont l'essentiel du référencement : chacune porte un
 synopsis original en anglais et en français, un extrait d'environ 1 200 mots pris
-au début du livre, une note de contexte sur l'auteur, et des liens vers le reste
-de la série. Aucun de ces textes n'est repris d'Amazon — pas de contenu dupliqué.
+au début du livre (quand le texte anglais publié est disponible), une note de contexte
+sur l'auteur, et des liens vers le reste de la série. Aucun de ces textes n'est repris d'Amazon — pas de contenu dupliqué.
 
 Elles sont **générées** depuis les manuscrits. Pour en régénérer une après avoir
 corrigé un titre ou ajouté un ASIN, il suffit d'éditer `assets/catalogue.js` : la
@@ -107,7 +107,7 @@ page se met à jour pour tout sauf l'extrait, qui est figé dans le HTML.
 
 ### Titres à paraître
 
-36 des 100 titres n'ont pas encore d'ASIN. Ils affichent un badge « à paraître »
+13 des 130 titres n'ont pas encore d'ASIN. Ils affichent un badge « à paraître »
 et un bouton inactif. Pour publier l'un d'eux :
 
 1. ajouter `"k":"B0…"` et `"p":"B0…"` à sa ligne dans `assets/catalogue.js` ;
@@ -117,7 +117,6 @@ et un bouton inactif. Pour publier l'un d'eux :
 
 ## À compléter
 
-- **Charles Hidetamabiveti** — ses deux volumes Collache n'ont pas encore d'ASIN.
 - **Couvertures** — 32 jaquettes sont stockées en local dans `assets/covers/`.
   Pour les autres, la page tente l'image Amazon déduite de l'ASIN, puis retombe
   sur une couverture typographique. Enregistrer une page auteur Amazon
