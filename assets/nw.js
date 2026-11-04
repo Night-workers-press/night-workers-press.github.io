@@ -136,7 +136,7 @@
     return p[p.length - 1];
   }
 
-  /* ---------- shelves: <div class="js-shelf" data-prog="zevaco" data-ser="Les Pardaillan"> ---------- */
+  /* ---------- shelves: <div class="js-shelf" data-prog="zevaco" data-ser="Les Pardaillan" data-tr="..."> ---------- */
   function renderShelves() {
     var nodes = document.querySelectorAll('.js-shelf');
     for (var i = 0; i < nodes.length; i++) {
@@ -144,10 +144,12 @@
       var prog = el.getAttribute('data-prog');
       var ser = el.getAttribute('data-ser');
       var au = el.getAttribute('data-au');
+      var tr = el.getAttribute('data-tr');
       var list = books().filter(function (b) {
         if (prog && b.prog !== prog) return false;
         if (ser && b.ser !== ser) return false;
         if (au && b.au !== au) return false;
+        if (tr && b.tr !== tr) return false;
         return true;
       });
       var html = '';
@@ -193,11 +195,13 @@
     gaboriau: ['The Gaboriau Project', 'Le Projet Gaboriau'],
     rocambole: ['The Rocambole Saga', 'La Saga Rocambole'],
     lostfrench: ['Lost French Thrillers', 'Romans oubliés'],
-    lupin: ['Arsène Lupin: The Forgotten', 'Arsène Lupin oublié'],
+    lupin: ['The Lupin Project', 'Le Projet Lupin'],
     rostand: ['The Rostand Project', 'Le Projet Rostand'],
     updated: ['The Great Works, Updated', 'Les Grands Textes, actualisés'],
     origins: ['Origins', 'Origines'],
-    bakumatsu: ['Bakumatsu Eyewitness', 'Témoins du Bakumatsu']
+    bakumatsu: ['Bakumatsu Eyewitness', 'Témoins du Bakumatsu'],
+    rostanden: ['Rostand in English', 'Rostand en anglais'],
+    classics: ['Classics in Modern English', 'Les classiques en anglais moderne']
   };
 
   function initCatalogue() {
